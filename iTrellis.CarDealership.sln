@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTrellis.CarDealership.Api", "iTrellis.CarDealership.Domain\iTrellis.CarDealership.Api.csproj", "{F95087DD-6252-49DB-A7A0-511A349265F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTrellis.CarDealership.ApiTest", "iTrellis.CarDealership.ApiTest\iTrellis.CarDealership.ApiTest.csproj", "{08254C2C-1014-4146-A261-A589728B09BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F95087DD-6252-49DB-A7A0-511A349265F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95087DD-6252-49DB-A7A0-511A349265F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95087DD-6252-49DB-A7A0-511A349265F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95087DD-6252-49DB-A7A0-511A349265F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08254C2C-1014-4146-A261-A589728B09BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08254C2C-1014-4146-A261-A589728B09BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08254C2C-1014-4146-A261-A589728B09BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08254C2C-1014-4146-A261-A589728B09BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FE5ACFC-A4DF-49D3-B5A5-F54D25D6DCAB}
+	EndGlobalSection
+EndGlobal
