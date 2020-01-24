@@ -2,13 +2,16 @@
   <div id="app" class="container-fluid">
     <top-bar></top-bar>
     <router-view />
+        <foot></foot>
   </div>
 </template>
 <script>
 import TopBar from "./components/TopBar";
+import Foot from "./components/Footer";
 export default {
   components: {
-    TopBar
+    TopBar,
+    Foot
   }
 };
 </script>
