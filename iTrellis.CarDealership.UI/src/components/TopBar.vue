@@ -1,13 +1,13 @@
 <template>
       <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">iTrellis' Car Dealership</b-navbar-brand>
+    <b-navbar-brand href="/">iTrellis' Car Dealership</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="home/">Home</b-nav-item>
-        <b-nav-item href="#">Search Cars</b-nav-item>
+        <b-nav-item><router-link class="nav-link" to="/">Home</router-link></b-nav-item>
+        <b-nav-item><router-link class="nav-link" to="search">Search Cars</router-link></b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -29,3 +29,20 @@
     </b-collapse>
   </b-navbar>
 </template>
+<script>
+export default {
+  methods:{
+    searchCar()
+    {
+    this.$router.push('search');
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+.nav-link
+{
+  color:white;
+  text-decoration: none;
+}
+</style>

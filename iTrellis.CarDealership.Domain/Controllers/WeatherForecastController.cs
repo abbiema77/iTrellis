@@ -8,8 +8,9 @@ using Microsoft.Extensions.Logging;
 namespace iTrellis.CarDealership.Domain.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    //[Route("[controller]")]
+    [Route("test")]
+    public class WeatherForecastController : ControllerBase 
     {
         private static readonly string[] Summaries = new[]
         {
@@ -24,6 +25,7 @@ namespace iTrellis.CarDealership.Domain.Controllers
         }
 
         [HttpGet]
+        [Route("get")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

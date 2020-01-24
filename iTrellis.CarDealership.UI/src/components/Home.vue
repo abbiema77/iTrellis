@@ -3,7 +3,7 @@
     <b-jumbotron class="jumbotron" header="iTrellis" lead="The best car dealership in town">
       <div class="bg"></div>
       <p>Click here and start finding your dream car</p>
-      <b-button variant="primary" href="#">Search Car</b-button>
+      <b-button variant="primary" @click="GoSearchPage()">Search Car</b-button>
     </b-jumbotron>
     <div class="row d-flex justify-content-around">
       <div class="col-md-3 tile">1</div>
@@ -27,7 +27,11 @@ export default {
   },
   computed: {},
   methods: {
-    async load() {}
+    async load() {},
+    GoSearchPage()
+    {
+      this.$router.push('search');
+    }
   },
   mounted() {
     this.load();
@@ -38,6 +42,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $color_purple: #a0a951;
+.home{
+  height:80%;
+}
 .jumbotron {
   position: relative;
   background: none;
