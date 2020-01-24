@@ -22,7 +22,27 @@ namespace iTrellis.CarDealership.Api.Repositories
 
         public List<Product> SearchProducts(Product product)
         {
-            return null;
+            var allProducts = GetAllProducts();
+
+            var properties = product.GetType().GetProperties();
+            foreach (var each in properties)
+            {
+                if (each.Name.Contains("Is") || each.Name.Contains("Has"))
+                {
+                    if (each.GetValue(product, null).Equals(true))
+                    {
+                        allProducts = allProducts.Where(p => p.GetType().GetProperty(each.Name).GetValue(p, null).Equals(true)).ToList();
+
+                    }
+
+                }           
+            }
+            if(!string.IsNullOrWhiteSpace(product.Color))
+            {
+                allProducts = allProducts.Where(p => p.Color == product.Color).ToList();
+            }
+
+            return allProducts;
         }
 
         public List<Product> GetAllProducts()
@@ -35,5 +55,7 @@ namespace iTrellis.CarDealership.Api.Repositories
             string path = @"c:\temp\cars.json";
             return File.ReadAllText(path);
         }
+
+
     }
 }

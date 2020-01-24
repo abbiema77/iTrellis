@@ -9,27 +9,40 @@ using Microsoft.Extensions.Logging;
 using iTrellis.CarDealership.Api.Models;
 using iTrellis.CarDealership.Api.Repositories;
 using iTrellis.CarDealership.Api.Controllers.Base;
+using Newtonsoft.Json;
 
 namespace iTrellis.CarDealership.Api.Controllers
 {
     [Route("product")]
     [ApiController]
-    public class ProductController : ApiController
+    public class ProductController : ControllerBase
     {
-        private readonly ILogger<ProductController> _logger;
         private readonly IProductService _product;
 
-        public ProductController(IContainer container) : base(container)
+        public ProductController(IProductService product)
         {
-            _logger = container.GetInstance<ILogger<ProductController>>();
-            _product = container.GetInstance<IProductService>();
+            _product = product;
+        }
+
+        [Route("postsearch")]
+        [HttpPost]
+        public dynamic PostSearch(Product dto)
+        {
+            return _product.SearchProducts(dto);
+        }
+
+        [Route("PostTest")]
+        [HttpPost]
+        public void PostTest(int id)
+        {
+            var test = id;
         }
 
         [HttpGet]
-        [Route("Search")]
-        public dynamic Search(Product dto)
+        [Route("GetAll")]
+        public List<Product> GetAllProducts()
         {
-            return null;
+            return _product.GetAllProducts();
         }
 
     }

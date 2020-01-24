@@ -3,12 +3,13 @@
     <b-jumbotron class="jumbotron" header="iTrellis" lead="The best car dealership in town">
       <div class="bg"></div>
       <p>Click here and start finding your dream car</p>
+
       <b-button variant="primary" @click="GoSearchPage()">Search Car</b-button>
     </b-jumbotron>
     <div class="row d-flex justify-content-around">
-      <div class="col-md-3 tile">1</div>
-      <div class="col-md-3 tile">2</div>
-      <div class="col-md-3 tile">3</div>
+      <div class="col-md-3 tile">lorem ipsum</div>
+      <div class="col-md-3 tile">lorem ipsum</div>
+      <div class="col-md-3 tile">lorem ipsum</div>
     </div>
 
   </div>
@@ -27,7 +28,9 @@ export default {
   },
   computed: {},
   methods: {
-    async load() {},
+    async load() {
+    //  this.testAxios = await this.$api.get('http://localhost:65165/product/Getall');
+    },
     GoSearchPage()
     {
       this.$router.push('search');
@@ -79,6 +82,7 @@ $color_purple: #a0a951;
 }
 .tile{
   width: 50%;
+  height:200px;
 	display: inline-block;
 	box-sizing: border-box;
 	background: #fff;		
@@ -86,7 +90,7 @@ $color_purple: #a0a951;
 	margin-bottom: 10px;
   background: $color_purple;
 color:white;
-font-size: 64px;
+font-size: 32px;
   &:hover{
     background: darken($color_purple, 10%);
   }
