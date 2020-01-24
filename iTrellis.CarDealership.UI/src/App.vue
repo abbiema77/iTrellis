@@ -1,20 +1,23 @@
 <template>
-    <div id="app">
-        <Home msg="Hello world!" />
-    </div>
+  <div id="app" class="container-fluid">
+    <top-bar></top-bar>
+    <router-view />
+  </div>
 </template>
-
 <script>
-    import Home from './components/Home.vue';
-
-    export default {
-        name: 'app',
-        components: {
-            Home
-        }
-    };
+import TopBar from "./components/TopBar";
+export default {
+  components: {
+    TopBar
+  }
+};
 </script>
-
 <style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 </style>
-
